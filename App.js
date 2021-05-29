@@ -52,7 +52,7 @@ export default class App extends React.Component {
 
       let user = {key: this.state.userKey};
 
-      await client.configure(config, user);
+      await client.configure(config, user, 3);
       // eslint-disable-next-line react/no-did-mount-set-state
       this.setState({ldClient: client});
     } catch (err) {
